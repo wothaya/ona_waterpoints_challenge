@@ -44,9 +44,8 @@ Deploy the dataprocessor war file located under target/dataprocessor.war to a we
 
 Start tomcat
 
-Load the URL http://localhost:[portnumber]/dataprocessor/ to any browser
+Load the URL http://localhost:[portnumber]/dataprocessor/ to any browser to test.
 
-To run Unit tests, execute the following:
 
 
 
