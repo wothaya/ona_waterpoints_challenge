@@ -46,6 +46,8 @@ Start tomcat
 
 Load the URL http://localhost:[portnumber]/dataprocessor/ to any browser to test.
 
+To run junit tests, execute; mvn clean test
+
 
 
 
