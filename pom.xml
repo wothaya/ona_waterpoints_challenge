@@ -86,7 +86,8 @@
 
 	<build>
 		<finalName>dataprocessor</finalName>
-		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>		
+		<testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>		
 		<!-- <outputDirectory>${basedir}/target/${project.artifactId}/classes</outputDirectory> -->
 		<resources>
 			<resource>
@@ -95,27 +96,30 @@
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<webResources>
-						<resource>
-							<directory>${basedir}/src/main/java</directory>
-							<targetPath>/WEB-INF/src</targetPath>
-						</resource>
-					</webResources>
-					<outputDirectory>${tomcat.webapp.dir}</outputDirectory>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.2</version>
-			</plugin>
+		</resources>		
+			<plugins>
+				<plugin>
+				
+					<artifactId>maven-war-plugin</artifactId>
+					<configuration>
+						<webResources>
+							<resource>
+								<directory>${basedir}/src/main/java</directory>
+								<targetPath>/WEB-INF/src</targetPath>
+							</resource>
+						</webResources>
+						<outputDirectory>${tomcat.webapp.dir}</outputDirectory>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
 
-		</plugins>
+			</plugins>
 
 	</build>
+	
+	
 </project>
